@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tryings",
+  "info": {
+    "singularName": "trying",
+    "pluralName": "tryings",
+    "displayName": "trying"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "try1": {
+      "type": "string"
+    },
+    "try2": {
+      "type": "string"
+    }
+  }
+}

@@ -682,6 +682,35 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiTryingTrying extends Struct.CollectionTypeSchema {
+  collectionName: 'tryings';
+  info: {
+    displayName: 'trying';
+    pluralName: 'tryings';
+    singularName: 'trying';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::trying.trying'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    try1: Schema.Attribute.String;
+    try2: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1201,6 +1230,7 @@ declare module '@strapi/strapi' {
       'api::productsss.productsss': ApiProductsssProductsss;
       'api::review.review': ApiReviewReview;
       'api::service.service': ApiServiceService;
+      'api::trying.trying': ApiTryingTrying;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
