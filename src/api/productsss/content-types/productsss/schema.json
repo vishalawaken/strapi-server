@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productssses",
+  "info": {
+    "singularName": "productsss",
+    "pluralName": "productssses",
+    "displayName": "productsss"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
